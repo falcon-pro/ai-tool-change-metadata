@@ -20,8 +20,14 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
-  },
+    },
+     // ---- ADD THIS NEW SECTION FOR TS-NODE ----
+    },
+    "ts-node": {
+      "compilerOptions": {
+        "module": "CommonJS"
+      }
+    },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "full-worker-test.ts"] // Exclude our test file from the main build
 }
